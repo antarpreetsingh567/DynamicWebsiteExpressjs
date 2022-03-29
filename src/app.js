@@ -5,7 +5,7 @@ const User = require("./models/usermessage");
 const hbs = require("hbs");
 
 const app = express();
-const port = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 
 // setting the path 
 const staticpath = path.join(__dirname, "../public");
@@ -42,4 +42,6 @@ app.post("/contact", async(req, res) => {
 })
 
 // server create 
-app.listen(port, '0.0.0.0');
+app.listen(PORT, () => {
+    console.log(`server is running at port no ${PORT}`);
+})
