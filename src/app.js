@@ -42,6 +42,4 @@ app.post("/contact", async(req, res) => {
 })
 
 // server create 
-app.listen(port, () => {
-    console.log(`server is running at port no ${port}`);
-})
+app.listen(port, '0.0.0.0');
